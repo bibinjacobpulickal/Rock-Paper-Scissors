@@ -11,6 +11,9 @@
 		234E314D2C98410F001D604B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E314C2C98410F001D604B /* ContentView.swift */; };
 		234E314F2C984110001D604B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234E314E2C984110001D604B /* Assets.xcassets */; };
 		234E31522C984110001D604B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234E31512C984110001D604B /* Preview Assets.xcassets */; };
+		234E315A2C984535001D604B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 234E31592C984535001D604B /* Lottie */; };
+		234E315E2C98FDE3001D604B /* ropasci.json in Resources */ = {isa = PBXBuildFile; fileRef = 234E315D2C98FDE3001D604B /* ropasci.json */; };
+		23EBDD722CD90BFD00953398 /* Amarante-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23EBDD712CD90BFD00953398 /* Amarante-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		234E314C2C98410F001D604B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		234E314E2C984110001D604B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		234E31512C984110001D604B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		234E315D2C98FDE3001D604B /* ropasci.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ropasci.json; sourceTree = "<group>"; };
+		23EBDD712CD90BFD00953398 /* Amarante-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amarante-Regular.ttf"; sourceTree = "<group>"; };
+		23EBDD732CD90CE500953398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234E315A2C984535001D604B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,11 @@
 		234E31492C98410F001D604B /* RoPaSci */ = {
 			isa = PBXGroup;
 			children = (
+				23EBDD732CD90CE500953398 /* Info.plist */,
+				23EBDD6F2CD90BBA00953398 /* Resources */,
 				234E314A2C98410F001D604B /* RoPaSciApp.swift */,
 				234E314C2C98410F001D604B /* ContentView.swift */,
+				234E315D2C98FDE3001D604B /* ropasci.json */,
 				234E314E2C984110001D604B /* Assets.xcassets */,
 				234E31502C984110001D604B /* Preview Content */,
 			);
@@ -65,6 +75,22 @@
 				234E31512C984110001D604B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23EBDD6F2CD90BBA00953398 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23EBDD702CD90BC100953398 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23EBDD702CD90BC100953398 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				23EBDD712CD90BFD00953398 /* Amarante-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +109,9 @@
 			dependencies = (
 			);
 			name = RoPaSci;
+			packageProductDependencies = (
+				234E31592C984535001D604B /* Lottie */,
+			);
 			productName = RoPaSci;
 			productReference = 234E31472C98410F001D604B /* RoPaSci.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 234E313E2C98410F001D604B;
+			packageReferences = (
+				234E31582C984535001D604B /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 234E31482C98410F001D604B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +157,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EBDD722CD90BFD00953398 /* Amarante-Regular.ttf in Resources */,
 				234E31522C984110001D604B /* Preview Assets.xcassets in Resources */,
 				234E314F2C984110001D604B /* Assets.xcassets in Resources */,
+				234E315E2C98FDE3001D604B /* ropasci.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +306,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RoPaSci/Preview Content\"";
+				DEVELOPMENT_TEAM = 32BS4266DT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoPaSci/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,13 +336,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RoPaSci/Preview Content\"";
+				DEVELOPMENT_TEAM = 32BS4266DT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoPaSci/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		234E31582C984535001D604B /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		234E31592C984535001D604B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 234E31582C984535001D604B /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 234E313F2C98410F001D604B /* Project object */;
 }
